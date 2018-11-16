@@ -9,8 +9,15 @@ app.engine('handlebars', hbs());
 app.set('view engine','handlebars');
 
 app.get('/', function(request,  response){
+    response.render('titulo');
+});
 
-    response.render('main');
+app.get('/descripcion', function(request,  response){
+    response.render('descripcion');
+});
+
+app.get('/enlaces', function(request,  response){
+    response.render('enlaces');
 });
 
 app.listen(5500);
